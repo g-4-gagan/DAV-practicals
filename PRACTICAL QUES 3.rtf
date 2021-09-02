@@ -1,0 +1,373 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9\tab\tab  \fs32  \tab\ul\b PRACTICAL QUES 3\par
+\par
+\ulnone\b0 import pandas as pd\par
+import numpy as np\par
+import random\par
+dataframe = pd.DataFrame(np.random.randint(0,100,size=(50,3)), columns=list('123'))\par
+dataframe\par
+\ul\b OUTPUT :\ulnone\b0\par
+1\tab 2\tab 3\par
+0\tab 47\tab 35\tab 60\par
+1\tab 78\tab 58\tab 50\par
+2\tab 50\tab 65\tab 59\par
+3\tab 51\tab 28\tab 43\par
+4\tab 77\tab 90\tab 28\par
+5\tab 15\tab 89\tab 18\par
+6\tab 66\tab 94\tab 43\par
+7\tab 42\tab 21\tab 89\par
+8\tab 11\tab 84\tab 71\par
+9\tab 36\tab 25\tab 35\par
+10\tab 50\tab 22\tab 21\par
+11\tab 94\tab 19\tab 78\par
+12\tab 52\tab 34\tab 65\par
+13\tab 6\tab 90\tab 82\par
+14\tab 0\tab 23\tab 55\par
+15\tab 99\tab 41\tab 12\par
+16\tab 14\tab 29\tab 42\par
+17\tab 69\tab 47\tab 8\par
+18\tab 76\tab 84\tab 51\par
+19\tab 67\tab 59\tab 73\par
+20\tab 1\tab 40\tab 41\par
+21\tab 23\tab 85\tab 41\par
+22\tab 61\tab 74\tab 61\par
+23\tab 26\tab 99\tab 82\par
+24\tab 90\tab 29\tab 43\par
+25\tab 1\tab 53\tab 30\par
+26\tab 20\tab 41\tab 21\par
+27\tab 39\tab 8\tab 37\par
+28\tab 80\tab 97\tab 22\par
+29\tab 31\tab 27\tab 34\par
+30\tab 74\tab 29\tab 34\par
+31\tab 58\tab 42\tab 51\par
+32\tab 48\tab 32\tab 3\par
+33\tab 17\tab 39\tab 91\par
+34\tab 36\tab 51\tab 41\par
+35\tab 9\tab 34\tab 66\par
+36\tab 58\tab 75\tab 32\par
+37\tab 36\tab 7\tab 7\par
+38\tab 14\tab 29\tab 67\par
+39\tab 44\tab 39\tab 11\par
+40\tab 92\tab 10\tab 72\par
+41\tab 21\tab 44\tab 76\par
+42\tab 74\tab 83\tab 57\par
+43\tab 13\tab 83\tab 55\par
+44\tab 15\tab 49\tab 22\par
+45\tab 28\tab 67\tab 11\par
+46\tab 16\tab 34\tab 9\par
+47\tab 62\tab 49\tab 64\par
+48\tab 71\tab 92\tab 60\par
+49\tab 36\tab 98\tab 3\par
+-------------------------------------------------------\par
+\b #replace the values with null\b0\par
+for c in  dataframe.columns:\par
+    dataframe.loc[dataframe.sample(frac=0.10).index,c]=np.nan\par
+dataframe\par
+\ul\b OUTPUT :\par
+\ulnone\b0\par
+1\tab 2\tab 3\par
+0\tab NaN\tab 35.0\tab 60.0\par
+1\tab 78.0\tab 58.0\tab NaN\par
+2\tab 50.0\tab 65.0\tab 59.0\par
+3\tab 51.0\tab 28.0\tab 43.0\par
+4\tab 77.0\tab 90.0\tab 28.0\par
+5\tab 15.0\tab 89.0\tab 18.0\par
+6\tab 66.0\tab 94.0\tab 43.0\par
+7\tab 42.0\tab 21.0\tab 89.0\par
+8\tab 11.0\tab 84.0\tab 71.0\par
+9\tab 36.0\tab 25.0\tab NaN\par
+10\tab 50.0\tab 22.0\tab 21.0\par
+11\tab NaN\tab 19.0\tab 78.0\par
+12\tab 52.0\tab 34.0\tab 65.0\par
+13\tab 6.0\tab 90.0\tab 82.0\par
+14\tab 0.0\tab 23.0\tab 55.0\par
+15\tab 99.0\tab NaN\tab 12.0\par
+16\tab 14.0\tab 29.0\tab NaN\par
+17\tab 69.0\tab 47.0\tab 8.0\par
+18\tab 76.0\tab 84.0\tab 51.0\par
+19\tab 67.0\tab NaN\tab 73.0\par
+20\tab 1.0\tab 40.0\tab 41.0\par
+21\tab 23.0\tab NaN\tab 41.0\par
+22\tab 61.0\tab 74.0\tab 61.0\par
+23\tab 26.0\tab 99.0\tab 82.0\par
+24\tab 90.0\tab 29.0\tab 43.0\par
+25\tab 1.0\tab 53.0\tab 30.0\par
+26\tab 20.0\tab 41.0\tab 21.0\par
+27\tab NaN\tab 8.0\tab 37.0\par
+28\tab 80.0\tab 97.0\tab 22.0\par
+29\tab 31.0\tab NaN\tab 34.0\par
+30\tab 74.0\tab 29.0\tab 34.0\par
+31\tab 58.0\tab 42.0\tab 51.0\par
+32\tab 48.0\tab NaN\tab 3.0\par
+33\tab 17.0\tab 39.0\tab 91.0\par
+34\tab 36.0\tab 51.0\tab 41.0\par
+35\tab 9.0\tab 34.0\tab NaN\par
+36\tab 58.0\tab 75.0\tab 32.0\par
+37\tab 36.0\tab 7.0\tab 7.0\par
+38\tab 14.0\tab 29.0\tab 67.0\par
+39\tab 44.0\tab 39.0\tab 11.0\par
+40\tab 92.0\tab 10.0\tab NaN\par
+41\tab 21.0\tab 44.0\tab 76.0\par
+42\tab 74.0\tab 83.0\tab 57.0\par
+43\tab 13.0\tab 83.0\tab 55.0\par
+44\tab 15.0\tab 49.0\tab 22.0\par
+45\tab NaN\tab 67.0\tab 11.0\par
+46\tab 16.0\tab 34.0\tab 9.0\par
+47\tab 62.0\tab 49.0\tab 64.0\par
+48\tab NaN\tab 92.0\tab 60.0\par
+49\tab 36.0\tab 98.0\tab 3.0\ul\b\par
+\ulnone\b0 ---------------------------------------------------------------------------------------------\par
+\ul\b # PART A\ulnone\b0\par
+print(dataframe.isnull().sum().sum())\par
+\ul\b OUTPUT :\par
+\ulnone\b0 15\par
+------------------------------------------------------------------------------------------------\par
+\ul\b # PART B\ulnone\b0\par
+nan_col=dataframe.columns[dataframe.isnull().any()]\par
+nan_col\par
+for col in nan_col:\par
+    print(col,dataframe[col].isnull().sum())\par
+\ul\b OUTPUT :\par
+\ulnone\b0 1 5\par
+2 5\par
+3 5 \par
+------------------------------------------------------------------------------------------------\par
+\ul\b #PART C\ulnone\b0\par
+#PART C\par
+sum=dataframe.sum(axis=1)\par
+print("SUM IS ::-->\\n",sum)\par
+print("\\n MAXIMUM SUM IS ::--> ",sum.max())\par
+max_sum_row = dataframe.sum(axis=1).idxmax()\par
+print("\\n row no. having maiximum sum is ::" ,max_sum_row)\par
+\par
+dataframe=dataframe.drop(max_sum_row ,axis =0)\par
+dataframe\par
+\ul\b OUTPUT : \par
+\ulnone\b0 SUM IS ::-->\par
+ 0      95.0\par
+1     136.0\par
+2     174.0\par
+3     122.0\par
+4     195.0\par
+5     122.0\par
+6     203.0\par
+7     152.0\par
+8     166.0\par
+9      61.0\par
+10     93.0\par
+11     97.0\par
+12    151.0\par
+13    178.0\par
+14     78.0\par
+15    111.0\par
+16     43.0\par
+17    124.0\par
+18    211.0\par
+19    140.0\par
+20     82.0\par
+21     64.0\par
+22    196.0\par
+23    207.0\par
+24    162.0\par
+25     84.0\par
+26     82.0\par
+27     45.0\par
+28    199.0\par
+29     65.0\par
+30    137.0\par
+31    151.0\par
+32     51.0\par
+33    147.0\par
+34    128.0\par
+35     43.0\par
+36    165.0\par
+37     50.0\par
+38    110.0\par
+39     94.0\par
+40    102.0\par
+41    141.0\par
+43    151.0\par
+44     86.0\par
+45     78.0\par
+46     59.0\par
+47    175.0\par
+48    152.0\par
+49    137.0\par
+dtype: float64\par
+\par
+ MAXIMUM SUM IS ::-->  211.0\par
+\par
+ row no. having maiximum sum is :: 18\par
+\par
+ DATA AFTER REMOVING THE ROW HAVING MAXIMUM VALUE\par
+\tab 1\tab 2\tab 3\par
+0\tab NaN\tab 35.0\tab 60.0\par
+1\tab 78.0\tab 58.0\tab NaN\par
+2\tab 50.0\tab 65.0\tab 59.0\par
+3\tab 51.0\tab 28.0\tab 43.0\par
+4\tab 77.0\tab 90.0\tab 28.0\par
+5\tab 15.0\tab 89.0\tab 18.0\par
+6\tab 66.0\tab 94.0\tab 43.0\par
+7\tab 42.0\tab 21.0\tab 89.0\par
+8\tab 11.0\tab 84.0\tab 71.0\par
+9\tab 36.0\tab 25.0\tab NaN\par
+10\tab 50.0\tab 22.0\tab 21.0\par
+11\tab NaN\tab 19.0\tab 78.0\par
+12\tab 52.0\tab 34.0\tab 65.0\par
+13\tab 6.0\tab 90.0\tab 82.0\par
+14\tab 0.0\tab 23.0\tab 55.0\par
+15\tab 99.0\tab NaN\tab 12.0\par
+16\tab 14.0\tab 29.0\tab NaN\par
+17\tab 69.0\tab 47.0\tab 8.0\par
+19\tab 67.0\tab NaN\tab 73.0\par
+20\tab 1.0\tab 40.0\tab 41.0\par
+21\tab 23.0\tab NaN\tab 41.0\par
+22\tab 61.0\tab 74.0\tab 61.0\par
+23\tab 26.0\tab 99.0\tab 82.0\par
+24\tab 90.0\tab 29.0\tab 43.0\par
+25\tab 1.0\tab 53.0\tab 30.0\par
+26\tab 20.0\tab 41.0\tab 21.0\par
+27\tab NaN\tab 8.0\tab 37.0\par
+28\tab 80.0\tab 97.0\tab 22.0\par
+29\tab 31.0\tab NaN\tab 34.0\par
+30\tab 74.0\tab 29.0\tab 34.0\par
+31\tab 58.0\tab 42.0\tab 51.0\par
+32\tab 48.0\tab NaN\tab 3.0\par
+33\tab 17.0\tab 39.0\tab 91.0\par
+34\tab 36.0\tab 51.0\tab 41.0\par
+35\tab 9.0\tab 34.0\tab NaN\par
+36\tab 58.0\tab 75.0\tab 32.0\par
+37\tab 36.0\tab 7.0\tab 7.0\par
+38\tab 14.0\tab 29.0\tab 67.0\par
+39\tab 44.0\tab 39.0\tab 11.0\par
+40\tab 92.0\tab 10.0\tab NaN\par
+41\tab 21.0\tab 44.0\tab 76.0\par
+43\tab 13.0\tab 83.0\tab 55.0\par
+44\tab 15.0\tab 49.0\tab 22.0\par
+45\tab NaN\tab 67.0\tab 11.0\par
+46\tab 16.0\tab 34.0\tab 9.0\par
+47\tab 62.0\tab 49.0\tab 64.0\par
+48\tab NaN\tab 92.0\tab 60.0\par
+49\tab 36.0\tab 98.0\tab 3.0\par
+-----------------------------------------------------------------------------------------------\par
+# PART D\par
+sortdf=dataframe.sort_values('1')\par
+sortdf\par
+\ul\b OUTPUT : \par
+
+\pard\li720\sa200\sl276\slmult1\ulnone\b0 1\tab 2\tab 3\par
+
+\pard\sa200\sl276\slmult1 14\tab 0.0\tab 23.0\tab 55.0\par
+25\tab 1.0\tab 53.0\tab 30.0\par
+20\tab 1.0\tab 40.0\tab 41.0\par
+13\tab 6.0\tab 90.0\tab 82.0\par
+35\tab 9.0\tab 34.0\tab NaN\par
+8\tab 11.0\tab 84.0\tab 71.0\par
+43\tab 13.0\tab 83.0\tab 55.0\par
+38\tab 14.0\tab 29.0\tab 67.0\par
+16\tab 14.0\tab 29.0\tab NaN\par
+5\tab 15.0\tab 89.0\tab 18.0\par
+44\tab 15.0\tab 49.0\tab 22.0\par
+46\tab 16.0\tab 34.0\tab 9.0\par
+33\tab 17.0\tab 39.0\tab 91.0\par
+26\tab 20.0\tab 41.0\tab 21.0\par
+41\tab 21.0\tab 44.0\tab 76.0\par
+21\tab 23.0\tab NaN\tab 41.0\par
+23\tab 26.0\tab 99.0\tab 82.0\par
+29\tab 31.0\tab NaN\tab 34.0\par
+49\tab 36.0\tab 98.0\tab 3.0\par
+34\tab 36.0\tab 51.0\tab 41.0\par
+9\tab 36.0\tab 25.0\tab NaN\par
+37\tab 36.0\tab 7.0\tab 7.0\par
+7\tab 42.0\tab 21.0\tab 89.0\par
+39\tab 44.0\tab 39.0\tab 11.0\par
+32\tab 48.0\tab NaN\tab 3.0\par
+10\tab 50.0\tab 22.0\tab 21.0\par
+2\tab 50.0\tab 65.0\tab 59.0\par
+3\tab 51.0\tab 28.0\tab 43.0\par
+12\tab 52.0\tab 34.0\tab 65.0\par
+36\tab 58.0\tab 75.0\tab 32.0\par
+31\tab 58.0\tab 42.0\tab 51.0\par
+22\tab 61.0\tab 74.0\tab 61.0\par
+47\tab 62.0\tab 49.0\tab 64.0\par
+6\tab 66.0\tab 94.0\tab 43.0\par
+19\tab 67.0\tab NaN\tab 73.0\par
+17\tab 69.0\tab 47.0\tab 8.0\par
+30\tab 74.0\tab 29.0\tab 34.0\par
+4\tab 77.0\tab 90.0\tab 28.0\par
+1\tab 78.0\tab 58.0\tab NaN\par
+28\tab 80.0\tab 97.0\tab 22.0\par
+24\tab 90.0\tab 29.0\tab 43.0\par
+40\tab 92.0\tab 10.0\tab NaN\par
+15\tab 99.0\tab NaN\tab 12.0\par
+0\tab NaN\tab 35.0\tab 60.0\par
+11\tab NaN\tab 19.0\tab 78.0\par
+27\tab NaN\tab 8.0\tab 37.0\par
+45\tab NaN\tab 67.0\tab 11.0\par
+48\tab NaN\tab 92.0\tab 60.0\par
+------------------------------------------------------------------------------------------------\par
+\ul\b # PART E\ulnone\b0\par
+dataframe =dataframe.drop_duplicates(subset='1',keep = "first")\par
+print(dataframe)\par
+\ul\b OUTPUT : \par
+\ulnone\b0        1     2     3\par
+0    NaN  35.0  60.0\par
+1   78.0  58.0   NaN\par
+2   50.0  65.0  59.0\par
+3   51.0  28.0  43.0\par
+4   77.0  90.0  28.0\par
+5   15.0  89.0  18.0\par
+6   66.0  94.0  43.0\par
+7   42.0  21.0  89.0\par
+8   11.0  84.0  71.0\par
+9   36.0  25.0   NaN\par
+12  52.0  34.0  65.0\par
+13   6.0  90.0  82.0\par
+14   0.0  23.0  55.0\par
+15  99.0   NaN  12.0\par
+16  14.0  29.0   NaN\par
+17  69.0  47.0   8.0\par
+19  67.0   NaN  73.0\par
+20   1.0  40.0  41.0\par
+21  23.0   NaN  41.0\par
+22  61.0  74.0  61.0\par
+23  26.0  99.0  82.0\par
+24  90.0  29.0  43.0\par
+26  20.0  41.0  21.0\par
+28  80.0  97.0  22.0\par
+29  31.0   NaN  34.0\par
+30  74.0  29.0  34.0\par
+31  58.0  42.0  51.0\par
+32  48.0   NaN   3.0\par
+33  17.0  39.0  91.0\par
+35   9.0  34.0   NaN\par
+39  44.0  39.0  11.0\par
+40  92.0  10.0   NaN\par
+41  21.0  44.0  76.0\par
+43  13.0  83.0  55.0\par
+46  16.0  34.0   9.0\par
+47  62.0  49.0  64.0\par
+------------------------------------------------------------------------------------------------\par
+\ul\b # PART F\ulnone\b0\par
+correlation = dataframe['1'].corr(dataframe['2'])\par
+print("CORRELATION IS :: ", correlation)\par
+covariance = dataframe['2'].cov(dataframe['3'])\par
+print("COVARIANCE IS :: ",covariance)\par
+\ul\b OUTPUT : \par
+\ulnone\b0 CORRELATION IS ::  -0.02785328614690539\par
+COVARIANCE IS ::  15.369230769230754\par
+-----------------------------------------------------------------------------------------------\par
+\ul\b # PART H\ulnone\b0\par
+dataframe =  pd.cut(dataframe['2'],bins=5).head()\par
+dataframe\par
+\ul\b OUTPUT : \par
+\ulnone\b0 0    (27.8, 45.6]\par
+1    (45.6, 63.4]\par
+2    (63.4, 81.2]\par
+3    (27.8, 45.6]\par
+4    (81.2, 99.0]\par
+Name: 2, dtype: category\par
+Categories (5, interval[float64, right]): [(9.911, 27.8] < (27.8, 45.6] < (45.6, 63.4] < (63.4, 81.2] < (81.2, 99.0]]\ul\b\par
+}
+ 
